@@ -1,0 +1,31 @@
+{
+  "name": "whiteboard-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaima-Alkhateeb/whiteboard-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaima-Alkhateeb/whiteboard-backend/issues"
+  },
+  "homepage": "https://github.com/Shaima-Alkhateeb/whiteboard-backend#readme",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.6"
+  }
+}
