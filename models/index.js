@@ -19,7 +19,8 @@ const sequelizeOption = {
     }
 } 
 
-// local
+
+
 // const sequelizeOption = { } 
 
 let sequelize = new Sequelize(POSTGRES_URL, sequelizeOption);
