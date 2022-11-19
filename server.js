@@ -25,7 +25,7 @@ app.use(errorHandler);
 app.use(notFoundHandler);
 
 function start(port) {
-    app.listen(port, () => console.log(`Server is starting on port ${port}`))
+    app.listen(port || 4001 , () => console.log(`Server is starting on port ${port}`))
 }
 
 module.exports = {

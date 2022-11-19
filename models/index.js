@@ -20,7 +20,7 @@ const sequelizeOption = {
 } 
 
 
-
+// const POSTGRES_URL = 'postgresql://shaima:0000@localhost:5432/postgres';
 // const sequelizeOption = { } 
 
 let sequelize = new Sequelize(POSTGRES_URL, sequelizeOption);
