@@ -4,10 +4,11 @@ const jwt = require("jsonwebtoken");
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define("User", {
+    // id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -40,11 +41,12 @@ module.exports = (sequelize, DataTypes) => {
           user: ["read", "create"],
         };
         return acl[this.role];
-      }
-    }
+      },
+    },
   });
 
   User.authenticateToken = (token) => {
+    // console.log(token);
     return jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
       if (err) {
         return err;

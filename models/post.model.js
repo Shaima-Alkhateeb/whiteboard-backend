@@ -21,3 +21,5 @@ const Post = (sequelize, DataTypes) => sequelize.define('Post', {
 })
 
 module.exports = Post;
+
+// .define('<table name>', {<table columns and their data types>})
