@@ -7,9 +7,11 @@ const user = require('./user.model');
 
 const collection = require('../collections/user-comment-routes');
 
-const POSTGRES_URL = process.env.DATABASE_URL || process.env.LOCAL_DATABASE_URL
+const POSTGRES_URL = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : process.env.DATABASE_URL ; // npm i sqlite3
 
-// ssl
+// const POSTGRES_URL = process.env.DATABASE_URL || process.env.LOCAL_DATABASE_URL
+
+// // ssl
 const sequelizeOption = {
     dialectOptions: {
         ssl: {
