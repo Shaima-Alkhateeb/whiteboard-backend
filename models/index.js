@@ -12,42 +12,24 @@ const collection = require('../collections/user-comment-routes');
 
 
 
-// const POSTGRES_URL = process.env.DATABASE_URL || process.env.LOCAL_DATABASE_URL
+const POSTGRES_URL = process.env.HEROKU_POSTGRESQL_GOLD_URL || process.env.LOCAL_DATABASE_URL
 
 // ssl
-// const sequelizeOption = {
-//     dialectOptions: {
-//         ssl: {
-//             require: true,
-//             rejectUnauthorized: false
-//         }
-//     }
-// } 
+const sequelizeOption = {
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    }
+} 
 
-// let sequelize = new Sequelize(POSTGRES_URL, sequelizeOption);
+let sequelize = new Sequelize(POSTGRES_URL, sequelizeOption);
 
 
 // const POSTGRES_URL = 'postgresql://shaima:0000@localhost:5432/postgres';
 // const sequelizeOption = { } 
 
-///////////////////////////
-
-const POSTGRES_URL =
-  process.env.DATABASE_URL || "postgresql://shaima:0000@localhost:5432/postgres";
-
-
-const sequelizeOption = {
-dialectOptions: {
-   ssl: {
-    require: true,
-    rejectUnauthorized: false,
-    },
-  },
-};
-
-const sequelize = new Sequelize(POSTGRES_URL, sequelizeOption );
-
-///////////
 // let sequelize = new Sequelize(POSTGRES_URL);
 
 ///////////////////////
