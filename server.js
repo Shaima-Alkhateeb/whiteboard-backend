@@ -10,6 +10,9 @@ const errorHandler = require('./error-handlers/500');
 const notFoundHandler = require('./error-handlers/404');
 const userRouter = require('./routes/user.routes')
 
+require('dotenv').config();
+
+// apllication level middleware
 app.use(cors());
 app.use(express.json());
 
@@ -21,6 +24,7 @@ app.get('/', (req, res) => {
     res.status(200).send('Home Page')
 })
 
+// Error handlers
 app.use(errorHandler);
 app.use(notFoundHandler);
 
@@ -29,6 +33,6 @@ function start(port) {
 }
 
 module.exports = {
-    app,
-    start
+    app, // app: app
+    start // start: start
 };
